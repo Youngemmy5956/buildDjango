@@ -20,3 +20,12 @@ def drinks(request, drink_name):
     }
     choice_of_drink = drink[drink_name]
     return HttpResponse(f"<h2>{drink_name}</h2> " + choice_of_drink)
+
+def foods(request, food_name):
+    food = {
+        'pizza' : 'type of fast food',
+        'burger' : 'type of fast food',
+        'pasta': 'type of italian food'
+    }
+    choice_of_food = food[food_name]
+    return HttpResponse(f"<h2>{food_name}</h2> " + choice_of_food)
