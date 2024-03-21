@@ -4,6 +4,8 @@ from django.shortcuts import render
 from http.client import HTTPResponse
 from django.http import HttpResponse
 from datetime import datetime
+# from .models import product
+
 
 def home(request):
     return HttpResponse("Welcome to little lemon restaurant!")
@@ -43,3 +45,33 @@ def menu(request):
 def book(request):
     return HttpResponse("Make a booking")
 
+def my_view(request): 
+    # ... 
+    if condition==True: 
+        return HttpResponseNotFound('<h1>Page not found</h1>') 
+    else: 
+        return HttpResponse('<h1>Page was found</h1>') 
+    
+    # def my_view(request): 
+    # # ... 
+    # if condition==True: 
+    #     return HttpResponse('<h1>Page not found</h1>', status_code='404') 
+    # else: 
+    #     return HttpResponse('<h1>Page was found</h1>') 
+
+
+def detail(request, id): 
+    try: 
+        p = Product.objects.get(pk=id) 
+    except Product.DoesNotExist: 
+        raise Http404("Product does not exist") 
+    return HttpResponse("Product Found") 
+
+
+def myview(request):   
+    if request.method == "POST":   
+        form = MyForm(request.POST)   
+        if form.is_valid():   
+            #process the form data 
+        else:   
+                return HttpResponse("Form submitted with invalid data") 
