@@ -68,10 +68,10 @@ def detail(request, id):
     return HttpResponse("Product Found") 
 
 
-def myview(request):   
-    if request.method == "POST":   
-        form = MyForm(request.POST)   
-        if form.is_valid():   
-            #process the form data 
-        else:   
-                return HttpResponse("Form submitted with invalid data") 
+# def myview(request):   
+#     if request.method == "POST":   
+#         form = MyForm(request.POST)   
+#         if form.is_valid():   
+#             #process the form data 
+#         else:   
+#                 return HttpResponse("Form submitted with invalid data") 
