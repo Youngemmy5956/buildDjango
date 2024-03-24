@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Area of a Circle</h2>
+
+Radius: <input type="number" id="radius" value="0"><br>
+<button onclick="calculateArea()">Calculate</button>
+
+<script>
+function calculateArea() {
+  var radius = document.getElementById("radius").value;
+  var area = Math.PI * radius * radius;
+  alert("The area of the circle is " + area);
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Area of a Rectangle</h2>
+
+Width: <input type="number" id="width" value="0"><br>
+Height: <input type="number" id="height" value="0"><br>
+<button onclick="calculateArea()">Calculate</button>
+
+<script>
+function calculateArea() {
+  var width = document.getElementById("width").value;
+  var height = document.getElementById("height").value;
+  var area = width * height;
+  alert("The area of the rectangle is " + area);
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Area of a Triangle</h2>
+
+Base: <input type="number" id="base" value="0"><br>
+Height: <input type="number" id="height" value="0"><br>
+<button onclick="calculateArea()">Calculate</button>
+
+<script>
+function calculateArea() {
+  var base = document.getElementById("base").value;
+  var height = document.getElementById("height").value;
+  var area = 0.5 * base * height;
+  alert("The area of the triangle is " + area);
+}
+</script>
+
+</body>
+</html>
