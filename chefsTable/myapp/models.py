@@ -7,5 +7,5 @@ class Menu(models.Model):
     price = models.IntegerField()
     # image = models.ImageField(upload_to='menu_images')
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name + ' : ' + self.cuisine 
