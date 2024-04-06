@@ -11,13 +11,13 @@ from django.db import models
     #     return self.name + ' : ' + self.cuisine 
     
     
-# class Drinks(models.Model):
-#     drink = models.CharField(max_length=200)
-#     price = models.IntegerField()
+class Drinks(models.Model):
+    drink = models.CharField(max_length=200)
+    price = models.IntegerField()
     
-# class Drinks(models.Model):
-#     drink_name = models.CharField(max_length=200)
-#     price = models.IntegerField()
+class Drinks(models.Model):
+    drink_name = models.CharField(max_length=200)
+    price = models.IntegerField()
           
 class MenuCategory(models.Model):
     menu_category_name = models.CharField(max_length=200)
